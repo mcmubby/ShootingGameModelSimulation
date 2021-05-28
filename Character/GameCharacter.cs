@@ -8,6 +8,6 @@ namespace Character
         public int speed;
         public abstract void Walk();
         public abstract void Run();
-        public abstract void Attack(IWeapon weapon);
+        public abstract void Shoot();
     }
 }

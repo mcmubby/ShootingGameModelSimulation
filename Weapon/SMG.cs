@@ -2,14 +2,24 @@ namespace Weapon
 {
     public class SMG : IWeapon
     {
-        public void DealDamage()
+        private int ammo;
+        private int bulletDamage;
+        public SMG()
         {
-            throw new System.NotImplementedException();
+            this.ammo = 90;
+            this.bulletDamage = -20;
         }
 
         public void Reload()
         {
-            throw new System.NotImplementedException();
+            this.ammo = 90;
+        }
+
+        public Bullet Shoot()
+        {
+            this.ammo-=5;
+            var bullet = new Bullet(bulletDamage);
+            return bullet;
         }
 
         public void Upgarde()

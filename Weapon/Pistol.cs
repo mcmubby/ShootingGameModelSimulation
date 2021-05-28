@@ -2,12 +2,12 @@ namespace Weapon
 {
     public class Pistol : IWeapon
     {
-        public void DealDamage()
+        public void Reload()
         {
             throw new System.NotImplementedException();
         }
 
-        public void Reload()
+        public Bullet Shoot()
         {
             throw new System.NotImplementedException();
         }

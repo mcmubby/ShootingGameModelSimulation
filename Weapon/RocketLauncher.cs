@@ -2,12 +2,17 @@ namespace Weapon
 {
     public class RocketLauncher : IWeapon
     {
-        public void DealDamage()
+        private int DealDamage()
+        {
+            return -50;
+        }
+
+        public void Reload()
         {
             throw new System.NotImplementedException();
         }
 
-        public void Reload()
+        public Bullet Shoot()
         {
             throw new System.NotImplementedException();
         }

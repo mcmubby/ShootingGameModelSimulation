@@ -12,9 +12,9 @@ namespace Character
             _weapon = weapon;
         }
 
-        public override void Attack(IWeapon weapon)
+        public override void Shoot()
         {
-            
+            var bullet = _weapon.Shoot();
         }
 
         public override void Run()
