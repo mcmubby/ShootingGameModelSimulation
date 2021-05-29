@@ -1,3 +1,5 @@
+using System;
+
 namespace Weapon
 {
     public class SMG : IWeapon
@@ -26,7 +28,7 @@ namespace Weapon
 
         public void Upgarde()
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine("That's going to cost you some credits");
         }
     }
 }

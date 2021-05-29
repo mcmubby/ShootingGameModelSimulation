@@ -1,25 +1,34 @@
+using System;
+
 namespace Weapon
 {
     public class RocketLauncher : IWeapon
     {
-        private int DealDamage()
+        private int ammo;
+        private int bulletDamage;
+        private int firePowerMaxDistance;
+        public RocketLauncher()
         {
-            return -50;
+            this.ammo = 5;
+            this.bulletDamage = -200;
+            this.firePowerMaxDistance = 100;
         }
 
         public void Reload()
         {
-            throw new System.NotImplementedException();
+            this.ammo = 5;
         }
 
         public Bullet Shoot()
         {
-            throw new System.NotImplementedException();
+            this.ammo-=1;
+            var bullet = new Bullet(bulletDamage, firePowerMaxDistance);
+            return bullet;
         }
 
         public void Upgarde()
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine("That's going to cost you some credits");
         }
     }
 }
