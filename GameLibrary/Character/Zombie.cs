@@ -1,20 +1,32 @@
+using Weapon;
+
 namespace Character
 {
     public class Zombie : GameCharacter
     {
-        public override void Run()
+        private readonly IWeapon _weapon;
+        private new int speed;
+
+        public Zombie()
         {
-            throw new System.NotImplementedException();
+            _weapon = new BareHand();
+            this.speed = 3;
         }
 
         public override void Shoot()
         {
-            throw new System.NotImplementedException();
+            var bullet = _weapon.Shoot();
+            
+        }
+
+        public override void Run()
+        {
+            this.speed = 3;
         }
 
         public override void Walk()
         {
-            throw new System.NotImplementedException();
+            this.speed = 6; 
         }
     }
 }

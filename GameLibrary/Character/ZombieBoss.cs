@@ -1,24 +1,36 @@
+using Weapon;
+
 namespace Character
 {
     public class ZombieBoss : GameCharacter
     {
+        private readonly IWeapon _weapon;
+        private new int speed;
+
+        public ZombieBoss()
+        {
+            _weapon = new RocketLauncher();
+            this.speed = 12;
+        }
         public void Fly()
         {
-            throw new System.NotImplementedException();
-        }
-        public override void Run()
-        {
-            throw new System.NotImplementedException();
+            this.speed = 25;
         }
 
         public override void Shoot()
         {
-            throw new System.NotImplementedException();
+            var bullet = _weapon.Shoot();
+            
+        }
+
+        public override void Run()
+        {
+            this.speed = 12;
         }
 
         public override void Walk()
         {
-            throw new System.NotImplementedException();
+            this.speed = 20; 
         }
     }
 }

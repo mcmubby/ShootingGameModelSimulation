@@ -41,6 +41,8 @@ namespace ShootingGameModelSimulation
         {
             var player = new Player(weapon);
             Console.WriteLine($"The game has started in {this.Mode} mode and you are equipped with a {this.Weapon} \n Goodluck!");
+            var zombieWave = new ZombieWave();
+            zombieWave.StartMode();
         }
 
         private IWeapon SelectWeapon()
