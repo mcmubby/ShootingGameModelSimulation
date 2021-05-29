@@ -63,7 +63,7 @@ namespace ShootingGameModelSimulation
 
                 case "2":
                     player.Walk();
-                    Console.WriteLine("You stopped of the zombie. \nThe zombie had you for lunch. \nYou are dead! \nPoints: 0 \nGame Over!");
+                    Console.WriteLine("You stopped in front of the zombie. \nThe zombie had you for lunch. \nYou are dead! \nPoints: 0 \nGame Over!");
                 break;
 
                 case "3":
