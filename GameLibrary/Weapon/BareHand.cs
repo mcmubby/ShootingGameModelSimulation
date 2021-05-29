@@ -2,7 +2,7 @@ using System;
 
 namespace Weapon
 {
-    internal class BareHand : IWeapon
+    public class BareHand : IWeapon
     {
         public void Reload()
         {

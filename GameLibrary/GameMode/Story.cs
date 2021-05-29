@@ -2,10 +2,9 @@ using System;
 
 namespace GameMode
 {
-    public class Story
+    public class Story : IGameMode
     {
-
-        internal void StartMode()
+        public void StartMode()
         {
             Console.WriteLine("Story mode selected");
         }

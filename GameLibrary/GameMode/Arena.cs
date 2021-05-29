@@ -2,9 +2,9 @@ using System;
 
 namespace GameMode
 {
-    public class Arena
+    public class Arena : IGameMode
     {
-        internal void StartMode()
+        public void StartMode()
         {
             Console.WriteLine("Arena mode selected");
         }

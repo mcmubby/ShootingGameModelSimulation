@@ -10,6 +10,7 @@ namespace Character
         public Player(IWeapon weapon)
         {
             _weapon = weapon;
+            this.speed = 5;
         }
 
         public override void Shoot()

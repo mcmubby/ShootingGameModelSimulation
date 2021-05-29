@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/Game/bin/Debug/net5.0/ShootingGameModelSimulation.dll",
+            "program": "${workspaceFolder}/bin/Debug/net5.0/ShootingGameModelSimulation.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/Game",
+            "cwd": "${workspaceFolder}",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "internalConsole",
             "stopAtEntry": false
@@ -20,7 +20,8 @@
         {
             "name": ".NET Core Attach",
             "type": "coreclr",
-            "request": "attach"
+            "request": "attach",
+            "processId": "${command:pickProcess}"
         }
     ]
 }
