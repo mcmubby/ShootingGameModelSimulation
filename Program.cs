@@ -1,4 +1,5 @@
 ﻿using System;
+using Weapon;
 
 namespace ShootingGameModelSimulation
 {

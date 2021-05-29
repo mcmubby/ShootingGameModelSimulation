@@ -15,6 +15,7 @@ namespace Character
         public override void Shoot()
         {
             var bullet = _weapon.Shoot();
+            
         }
 
         public override void Run()

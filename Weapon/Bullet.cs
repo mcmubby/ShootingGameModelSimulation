@@ -2,11 +2,11 @@ namespace Weapon
 {
     public class Bullet
     {
-        public int MaxDistance { get; private set; }
-        private int _bulletDamage;
-        public Bullet(int bulletDamage)
+        private int _maxDistance;
+        public int _bulletDamage { get; private set; }
+        public Bullet(int bulletDamage, int maxDistance)
         {
-            this.MaxDistance = 5;
+            _maxDistance = maxDistance;
             _bulletDamage = bulletDamage;
         }
     }
