@@ -43,6 +43,26 @@ namespace ShootingGameModelSimulation
             Console.WriteLine($"The game has started in {this.Mode} mode and you are equipped with a {this.Weapon} \n Goodluck!");
             var zombieWave = new ZombieWave();
             zombieWave.StartMode();
+
+            Console.WriteLine("What would you like to do?");
+            SelectReaction(player);
+        }
+
+        private void SelectReaction(Player player)
+        {
+            Console.WriteLine("Enter '1' to shoot and '2' to continue walking");
+            var userAction = Console.ReadLine();
+            
+            switch (userAction)
+            {
+                case "1":
+                    player.Shoot();
+                break;
+
+                case "2":
+                    player.Walk();
+                break;
+            }
         }
 
         private IWeapon SelectWeapon()

@@ -1,8 +1,9 @@
+using System;
 using Weapon;
 
 namespace Character
 {
-    public class Zombie : GameCharacter
+    public class Zombie : GameCharacter, IDisposable
     {
         private readonly IWeapon _weapon;
         private new int speed;
@@ -27,6 +28,12 @@ namespace Character
         public override void Walk()
         {
             this.speed = 6; 
+        }
+
+        public void Dispose()
+        {
+            Dispose();
+            GC.SuppressFinalize(this);
         }
     }
 }
