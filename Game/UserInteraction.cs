@@ -50,17 +50,25 @@ namespace ShootingGameModelSimulation
 
         private void SelectReaction(Player player)
         {
-            Console.WriteLine("Enter '1' to shoot and '2' to continue walking");
+            Console.WriteLine("Enter '1' to shoot, '2' to walk and '3' to run");
             var userAction = Console.ReadLine();
+            Bullet firedShot;
             
             switch (userAction)
             {
                 case "1":
-                    player.Shoot();
+                    firedShot = player.Shoot();
+                    Console.WriteLine("Zombie is dead. You win. \nPoints: 20 \nGame Over!");
                 break;
 
                 case "2":
                     player.Walk();
+                    Console.WriteLine("You stopped of the zombie. \nThe zombie had you for lunch. \nYou are dead! \nPoints: 0 \nGame Over!");
+                break;
+
+                case "3":
+                    player.Run();
+                    Console.WriteLine("You ran away from the zombie. You are not fit to play. \nPoints:2  \nGame Over!");
                 break;
             }
         }

@@ -14,20 +14,22 @@ namespace Character
             this.speed = 3;
         }
 
-        public override void Shoot()
+        public override Bullet Shoot()
         {
             var bullet = _weapon.Shoot();
-            
+            return bullet;
         }
 
         public override void Run()
         {
             this.speed = 3;
+            Console.WriteLine($"You have taken {this.speed} steps");
         }
 
         public override void Walk()
         {
             this.speed = 6; 
+            Console.WriteLine($"You have taken {this.speed} steps");
         }
 
         public void Dispose()

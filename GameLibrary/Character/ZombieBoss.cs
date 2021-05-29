@@ -1,3 +1,4 @@
+using System;
 using Weapon;
 
 namespace Character
@@ -17,20 +18,22 @@ namespace Character
             this.speed = 25;
         }
 
-        public override void Shoot()
+        public override Bullet Shoot()
         {
             var bullet = _weapon.Shoot();
-            
+            return bullet;
         }
 
         public override void Run()
         {
-            this.speed = 12;
+            this.speed = 20;
+            Console.WriteLine($"You have taken {this.speed} steps");
         }
 
         public override void Walk()
         {
-            this.speed = 20; 
+            this.speed = 12; 
+            Console.WriteLine($"You have taken {this.speed} steps");
         }
     }
 }
