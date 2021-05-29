@@ -8,6 +8,8 @@ namespace ShootingGameModelSimulation
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            var start = new UserInteraction();
+            start.SelectGameMode();
         }
     }
 }

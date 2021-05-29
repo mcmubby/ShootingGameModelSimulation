@@ -7,12 +7,8 @@ namespace ShootingGameModelSimulation
 {
     public class UserInteraction
     {
-        //A method to start selection
-        //A method to select game mode
-        //A method to select Weapon
-        //A method to start game
-        public string Mode { get; private set; }
-        public string Weapon { get; private set; }
+        private string Mode;
+        private string Weapon;
 
         public void SelectGameMode()
         {
@@ -24,12 +20,16 @@ namespace ShootingGameModelSimulation
             {
                 case "1":
                     var story = new Story();
+                    Console.Clear();
                     story.StartMode();
+                    this.Mode = "Story";
                 break;
 
                 case "2":
                     var arena = new Arena();
+                    Console.Clear();
                     arena.StartMode();
+                    this.Mode = "Arena";
                 break;
             }
 
@@ -40,6 +40,7 @@ namespace ShootingGameModelSimulation
         private void StartGame(IWeapon weapon)
         {
             var player = new Player(weapon);
+            Console.WriteLine($"The game has started in {this.Mode} mode and you are equipped with a {this.Weapon} \n Goodluck!");
         }
 
         private IWeapon SelectWeapon()
@@ -66,7 +67,7 @@ namespace ShootingGameModelSimulation
                     this.Weapon = typeof(RocketLauncher).ToString().Remove(0,7);
                 break;
             }
-
+            Console.Clear();
             return weapon;
         }
     }

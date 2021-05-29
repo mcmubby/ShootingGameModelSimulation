@@ -6,7 +6,7 @@ namespace GameMode
     {
         internal void StartMode()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Arena mode selected");
         }
     }
 }
